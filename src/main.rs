@@ -67,7 +67,7 @@ const RULES_V4: &str = r#"
     rule GetPhoneNumberOffset
     {
         strings:
-            $a = /[\x01-\x20]\x00{7}(\x0f|\x1f)\x00{7}[0-9]{11}\x00{5}\x0b\x00{7}\x0f\x00{7}/
+            $a = /[\x01-\x20]\x00{7}(\x0f|\x1f)\x00{7}[0-9+]{12}\x00{4}\x0c\x00{7}\x0f\x00{7}/
         condition:
             $a
     }
